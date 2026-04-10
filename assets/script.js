@@ -1,11 +1,11 @@
 const typesBelike = {
     aggressive: {donk:"assets/images/donk.webp", NiKo:"assets/images/niko.webp"},
-    steady: {zont1x:"assets/images/zoont1x.webp"},
-    team: {karrigan:"assets/images/karrigan.webp"},
-    lone: {ropz:"assets/images/ropz.webp"},
-    tactical: {apEX:"assets/images/apex.webp"},
+    steady: {zont1x:"assets/images/zoont1x.webp", Twistzz:"assets/images/twistzz.webp"},
+    team: {karrigan:"assets/images/karrigan.webp", Aleksib:"assets/images/aleksib.webp"},
+    lone: {ropz:"assets/images/ropz.webp", kscerato:"assets/images/kscerato.webp"},
+    tactical: {apEX:"assets/images/apex.webp", FalleN:"assets/images/fallen.webp"},
     troll: {InHuman:"assets/images/inhuman.jpg"},
-    sniper: {s1mple:"assets/images/simple.webp"},
+    sniper: {s1mple:"assets/images/simple.webp", DANK1NG:"assets/images/danking.webp"},
     pp19: {PP19:"assets/images/nzs.webp"},
     all: {ZywOo:"assets/images/zywoo.webp"},
     forsaken: {Forsaken:"assets/images/forsaken.webp"}
@@ -58,7 +58,7 @@ const questions = [
         { t: "提醒队友别再起狙了", type: "tactical" },
         { t: "让他把狙丢给我，我来carry", type: "sniper" },
         { t: "不管他，他爱咋玩就咋玩", type: "troll" },
-        { t: "好好沟通，教他怎么架点", type: "steady" }
+        { t: "好好沟通，教他怎么架点", type: "all" }
     ]},
     // 原6 优化
     { q: "进攻方，你更喜欢哪种打法？", options: [
@@ -78,12 +78,12 @@ const questions = [
     { q: "连续输了5局，来到0:5的比分，你时常会？", options: [
         { t: "失去信心，开始摆烂", type: "troll" },
         { t: "冷静调整战术", type: "tactical" },
-        { t: "开转开转，直接发力", type: "forsaken" },
+        { t: "开转开转，调高参数", type: "forsaken" },
         { t: "稳扎稳打，慢慢追分", type: "steady" }
     ]},
     // 原9 优化
     { q: "你的经济管理习惯是？", options: [
-        { t: "严格控制，确保每局都有长枪", type: "steady" },
+        { t: "严格控制，确保每局都有长枪", type: "all" },
         { t: "该花就花，不保留遗憾", type: "aggressive" },
         { t: "根据团队情况灵活调整", type: "team" },
         { t: "有钱就起狙，没钱就沙鹰", type: "sniper" }
@@ -133,19 +133,17 @@ const questions = [
     // 原16 优化
     { q: "队友犯错了，你的反应是？", options: [
         { t: "压力队友，再乱搞就摆烂", type: "troll" },
-        { t: "指出问题，教他正确做法", type: "tactical" },
+        { t: "指出问题，教他正确做法", type: "all" },
         { t: "无所谓，谁都有失误", type: "steady" },
         { t: "默默叹气，自己多打几个", type: "lone" }
     ]},
     // 原17 优化
     { q: "对于游戏输赢，你的态度是？", options: [
         { t: "必须赢，竞技游戏就是要上分", type: "aggressive" },
-        { t: "输赢无所谓，量力而行即可", type: "steady" },
+        { t: "输赢无所谓，量力而行即可", type: "all" },
         { t: "竞技游戏，配合到位即可", type: "team" },
         { t: "快乐第一，输赢随缘", type: "troll" }
     ]},
-
-    // ==================== 以下为【新增题目】让分配完全均匀 ====================
     { q: "你最想担任的团队位置是？", options: [
         { t: "突破手，第一个进点", type: "aggressive" },
         { t: "狙击手，架点控图", type: "sniper" },
@@ -159,7 +157,7 @@ const questions = [
         { t: "直接开枪拼运气", type: "pp19" }
     ]},
     { q: "游戏中你最看重的是什么？", options: [
-        { t: "战术与配合", type: "tactical" },
+        { t: "战术与配合", type: "all" },
         { t: "个人操作与击杀", type: "aggressive" },
         { t: "团队胜利", type: "team" },
         { t: "游戏快乐", type: "troll" }
@@ -177,7 +175,7 @@ const questions = [
         { t: "开始互动整活", type: "troll" }
     ]},
     { q: "你觉得自己的定位更像？", options: [
-        { t: "全能选手，啥都能玩", type: "all" },
+        { t: "全能选手", type: "all" },
         { t: "专注狙击", type: "sniper" },
         { t: "冲锋突破", type: "pp19" },
         { t: "战术运营", type: "tactical" }
@@ -190,9 +188,9 @@ const questions = [
     ]},
     { q: "如果能选一个技能，你选？", options: [
         { t: "枪枪爆头", type: "aggressive" },
-        { t: "无限道具", type: "tactical" },
-        { t: "透视全图", type: "forsaken" },
-        { t: "永远不死", type: "troll" }
+        { t: "透视穿墙", type: "forsaken" },
+        { t: "永远不死", type: "troll" },
+        { t: "狗运战神", type: "pp19" },
     ]}
 ];
 
