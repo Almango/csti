@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSTI人格测试</title>
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSTI人格测试</h1>
+            <p class="subtitle">完成所有题项，测出你的CSGO游戏人格</p>
+        </header>
+
+        <div class="quiz" id="quiz">
+            <div class="progress-text">已完成 <span id="answered">0</span> / 17 题</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+
+            <div id="questions"></div>
+
+            <button class="submit-btn" id="submit" onclick="showResult()" disabled>查看结果</button>
+        </div>
+
+        <div class="result" id="result">
+            <h2 class="result-type" id="result-type"></h2>
+            <p class="result-match" id="result-match"></p>
+            <div class="result-image" id="result-image"></div>
+            
+            <div class="result-desc">
+                <h3>人格解读</h3>
+                <p id="result-desc"></p>
+            </div>
+
+            <div class="dimensions">
+                <h3>七维人格评分</h3>
+                <div id="dimensions"></div>
+            </div>
+
+            <button class="restart-btn" onclick="restart()">重新测试</button>
+        </div>
+
+        <footer class="footer">
+            <p>本站内容仅供娱乐，部分资源来源于第三方</p>
+        </footer>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
