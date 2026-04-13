@@ -1,13 +1,13 @@
 const typesBelike = {
-    aggressive: {donk:"assets/images/donk.webp", NiKo:"assets/images/niko.webp"},
-    steady: {zont1x:"assets/images/zoont1x.webp", Twistzz:"assets/images/twistzz.webp"},
-    team: {karrigan:"assets/images/karrigan.webp", Aleksib:"assets/images/aleksib.webp"},
-    lone: {ropz:"assets/images/ropz.webp", kscerato:"assets/images/kscerato.webp"},
-    tactical: {apEX:"assets/images/apex.webp", FalleN:"assets/images/fallen.webp"},
+    aggressive: {donk:"assets/images/donk.webp", NiKo:"assets/images/niko.webp", rain:"assets/images/rain.webp", flameZ:"assets/images/flamez.webp", JamYoung:"assets/images/jamyoung.webp", Jimpphat:"assets/images/jimpphat.webp"},
+    steady: {zont1x:"assets/images/zoont1x.webp", Twistzz:"assets/images/twistzz.webp", rain:"assets/images/rain.webp", JamYoung:"assets/images/jamyoung.webp", mezii:"assets/images/mezii.webp"},
+    team: {karrigan:"assets/images/karrigan.webp", Aleksib:"assets/images/aleksib.webp", gla1ve:"assets/images/gla1ve.webp", Jimpphat:"assets/images/jimpphat.webp", mezii:"assets/images/mezii.webp"},
+    lone: {ropz:"assets/images/ropz.webp", kscerato:"assets/images/kscerato.webp", b1t: "assets/images/b1t.webp", TeSe:"assets/images/tese.webp", frozen:"assets/images/frozen.webp"},
+    tactical: {apEX:"assets/images/apex.webp", FalleN:"assets/images/fallen.webp", Snax:"assets/images/snax.webp", Brollan:"assets/images/brollan.webp", huNter:"assets/images/hunter.webp",frozen:"assets/images/frozen.webp"},
     troll: {InHuman:"assets/images/inhuman.jpg"},
-    sniper: {s1mple:"assets/images/simple.webp", DANK1NG:"assets/images/danking.webp"},
+    sniper: {s1mple:"assets/images/simple.webp", DANK1NG:"assets/images/danking.webp", Jame : "assets/images/jame.webp", KennyS:"assets/images/kennys.webp", m0NESY:"assets/images/m0nesy.webp", molodoy:"assets/images/molodoy.webp"},
     pp19: {PP19:"assets/images/nzs.webp"},
-    all: {ZywOo:"assets/images/zywoo.webp"},
+    all: {ZywOo:"assets/images/zywoo.webp", donk:"assets/images/donk.webp"},
     forsaken: {Forsaken:"assets/images/forsaken.webp"}
 };
 
@@ -29,7 +29,7 @@ const questions = [
     { q: "作为T方的你，手枪局输了，下一局你会选择？", options: [
         { t: "纯eco，为团队下一局考虑", type: "tactical" },
         { t: "起沙鹰，相信自己能翻盘", type: "aggressive" },
-        { t: "半甲Tec10，稳扎稳打", type: "steady" },
+        { t: "半甲Tec9，稳扎稳打", type: "steady" },
         { t: "让队友发把枪，一起快乐", type: "troll" }
     ]},
     // 原2 优化
@@ -58,7 +58,7 @@ const questions = [
         { t: "提醒队友别再起狙了", type: "tactical" },
         { t: "让他把狙丢给我，我来carry", type: "sniper" },
         { t: "不管他，他爱咋玩就咋玩", type: "troll" },
-        { t: "好好沟通，教他怎么架点", type: "all" }
+        { t: "好好沟通，教他怎么架点", type: "sniper" }
     ]},
     // 原6 优化
     { q: "进攻方，你更喜欢哪种打法？", options: [
