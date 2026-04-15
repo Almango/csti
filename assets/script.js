@@ -5,7 +5,7 @@ const typesBelike = {
     lone: {ropz:"assets/images/ropz.webp", kscerato:"assets/images/kscerato.webp", b1t: "assets/images/b1t.webp", TeSe:"assets/images/tese.webp", frozen:"assets/images/frozen.webp"},
     tactical: {apEX:"assets/images/apex.webp", FalleN:"assets/images/fallen.webp", Snax:"assets/images/snax.webp", Brollan:"assets/images/brollan.webp", huNter:"assets/images/hunter.webp",frozen:"assets/images/frozen.webp"},
     troll: {InHuman:"assets/images/inhuman.jpg"},
-    sniper: {s1mple:"assets/images/simple.webp", DANK1NG:"assets/images/danking.webp", Jame : "assets/images/jame.webp", KennyS:"assets/images/kennys.webp", m0NESY:"assets/images/m0nesy.webp", molodoy:"assets/images/molodoy.webp"},
+    sniper: { DANK1NG:"assets/images/danking.webp", },
     pp19: {PP19:"assets/images/nzs.webp"},
     all: {ZywOo:"assets/images/zywoo.webp", donk:"assets/images/donk.webp"},
     forsaken: {Forsaken:"assets/images/forsaken.webp"}
@@ -98,8 +98,8 @@ const questions = [
     ]},
 
     { q: "你最希望哪张地图回归？", options: [
-        { t: "死城之谜", type: "all" },
-        { t: "古堡激战", type: "all" },
+        { t: "死城之谜", type: "sniper" },
+        { t: "古堡激战", type: "sniper" },
         { t: "阿兹特克", type: "all" },
         { t: "湖畔激战", type: "all" }
     ]},
@@ -166,7 +166,7 @@ const questions = [
         { t: "自由人，独自游走", type: "lone" }
     ]},
     { q: "残局1v1，你和对手都残血，你会？", options: [
-        { t: "主动出击，拼一枪", type: "aggressive" },
+        { t: "主动对枪，实力压制", type: "aggressive" },
         { t: "耐心蹲守，等对手犯错", type: "steady" },
         { t: "静音游走，找时机偷袭", type: "lone" },
         { t: "直接开枪拼运气", type: "pp19" }
