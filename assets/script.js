@@ -75,12 +75,13 @@ const questions = [
         { t: "根据实际情况购买相应道具", type: "lone" }
     ]},
     // 原8 优化
-    { q: "连续输了5局，来到0:5的比分，你时常会？", options: [
+    { q: "连续输了8局，来到0:8的比分，你时常会？", options: [
         { t: "失去信心，开始摆烂", type: "troll" },
         { t: "冷静调整战术", type: "tactical" },
         { t: "开转开转，调高参数", type: "forsaken" },
         { t: "稳扎稳打，慢慢追分", type: "steady" }
     ]},
+
     // 原9 优化
     { q: "你的经济管理习惯是？", options: [
         { t: "严格控制，确保每局都有长枪", type: "all" },
@@ -88,7 +89,21 @@ const questions = [
         { t: "根据团队情况灵活调整", type: "team" },
         { t: "有钱就起狙，没钱就沙鹰", type: "sniper" }
     ]},
-    // 原10 优化
+
+    { q: "近距离对枪，你更偏爱哪个武器？", options: [
+        { t: "M4A1", type: "steady" },
+        { t: "M4A4", type: "aggressive" },
+        { t: "XM1014", type: "all" },
+        { t: "P90", type: "pp19" }
+    ]},
+
+    { q: "你最希望哪张地图回归？", options: [
+        { t: "死城之谜", type: "all" },
+        { t: "古堡激战", type: "all" },
+        { t: "阿兹特克", type: "all" },
+        { t: "湖畔激战", type: "all" }
+    ]},
+
     { q: "作为突破手，在烟雾的掩护下，你冲进去发现3个敌人，你会？", options: [
         { t: "能换一个是一个，为队友创造机会", type: "team" },
         { t: "拉枪线硬刚，相信自己能秒完", type: "aggressive" },
