@@ -72,7 +72,7 @@ const questions = [
         { t: "必须买满，道具是战术核心", type: "tactical" },
         { t: "有剩余钱就买，没有就算了", type: "pp19" },
         { t: "给队友发道具，配合团队", type: "team" },
-        { t: "烟闪随便扔，快乐最重要", type: "troll" }
+        { t: "根据实际情况购买相应道具", type: "lone" }
     ]},
     // 原8 优化
     { q: "连续输了5局，来到0:5的比分，你时常会？", options: [
@@ -89,7 +89,7 @@ const questions = [
         { t: "有钱就起狙，没钱就沙鹰", type: "sniper" }
     ]},
     // 原10 优化
-    { q: "作为突破手，你冲进去发现3个敌人，你会？", options: [
+    { q: "作为突破手，在烟雾的掩护下，你冲进去发现3个敌人，你会？", options: [
         { t: "能换一个是一个，为队友创造机会", type: "team" },
         { t: "拉枪线硬刚，相信自己能秒完", type: "aggressive" },
         { t: "退回来重新组织进攻", type: "tactical" },
@@ -105,7 +105,7 @@ const questions = [
     // 原12 优化
     { q: "你的开麦沟通风格是？", options: [
         { t: "详细报点，包括血量、位置、武器", type: "team" },
-        { t: "简单明了，只说关键信息", type: "tactical" },
+        { t: "简单明了，强调关键信息", type: "tactical" },
         { t: "可惜兄弟、好枪兄弟", type: "troll" },
         { t: "偶尔开麦，更多靠意识", type: "lone" }
     ]},
@@ -124,11 +124,11 @@ const questions = [
         { t: "你先开的，那我也开转", type: "forsaken" }
     ]},
     // 原15 优化
-    { q: "你最喜欢的武器组合是？", options: [
+    { q: "在经济充裕的情况下，你最喜欢的武器组合是？", options: [
         { t: "AK/M4 + 满道具", type: "tactical" },
-        { t: "大狙 + 沙鹰", type: "sniper" },
+        { t: "AWP + 沙鹰", type: "sniper" },
         { t: "野牛/P90，冲就完事", type: "pp19" },
-        { t: "内格夫/连喷，快乐就完事", type: "troll" }
+        { t: "内格夫/连喷，火力压制", type: "troll" }
     ]},
     // 原16 优化
     { q: "队友犯错了，你的反应是？", options: [
@@ -142,7 +142,7 @@ const questions = [
         { t: "必须赢，竞技游戏就是要上分", type: "aggressive" },
         { t: "输赢无所谓，量力而行即可", type: "all" },
         { t: "竞技游戏，配合到位即可", type: "team" },
-        { t: "快乐第一，输赢随缘", type: "troll" }
+        { t: "快乐第一，输赢随缘", type: "steady" }
     ]},
     { q: "你最想担任的团队位置是？", options: [
         { t: "突破手，第一个进点", type: "aggressive" },
@@ -185,6 +185,12 @@ const questions = [
         { t: "跟在队友身后补枪", type: "steady" },
         { t: "丢道具辅助队友", type: "team" },
         { t: "走另一条路线单带", type: "lone" }
+    ]},
+    { q: "你最喜欢的狙击手是？", options: [
+        { t: "m0NESY", type: "all" },
+        { t: "DANK1NG", type: "sniper" },
+        { t: "sh1ro", type: "aggressive" },
+        { t: "s1mple", type: "forsaken" }
     ]},
     { q: "如果能选一个技能，你选？", options: [
         { t: "枪枪爆头", type: "aggressive" },
