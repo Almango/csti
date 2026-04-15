@@ -297,3 +297,4 @@ function restart() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
