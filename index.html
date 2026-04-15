@@ -11,6 +11,15 @@
 </head>
 
 <body>
+    <!-- 欢迎弹窗 -->
+    <div class="modal" id="welcomeModal">
+        <div class="modal-content">
+            <h2>快来测出你的CSGO人格！</h2>
+            <p class="modal-ops">OPS：您可在页脚关闭广告</p>
+            <button class="modal-btn" onclick="closeModal()">开始测试</button>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <h1>CSTI人格测试</h1>
@@ -47,16 +56,42 @@
         </div>
 
         <footer class="footer">
+            <div class="ad-toggle">
+                <span class="ad-toggle-text">广告</span>
+                <label class="switch">
+                    <input type="checkbox" id="adSwitch" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
             <p>本站内容仅供娱乐，部分资源来源于第三方</p>
         </footer>
     </div>
     <script>
+        // 广告开关控制
         (function () {
-            var script = document.createElement('script');
-            script.src = 'https://pl29156693.profitablecpmratenetwork.com/3b/02/ca/3b02ca19caac0ac0fc61ee457d3671a1.js';
-            script.async = true;
-            script.fetchPriority = 'high';
-            document.head.appendChild(script);
+            // 从localStorage读取广告设置，默认为开启
+            var adEnabled = localStorage.getItem('adEnabled') !== 'false';
+            
+            // 设置开关状态
+            var adSwitch = document.getElementById('adSwitch');
+            if (adSwitch) {
+                adSwitch.checked = adEnabled;
+                
+                // 监听开关变化
+                adSwitch.addEventListener('change', function() {
+                    localStorage.setItem('adEnabled', this.checked);
+                    location.reload();
+                });
+            }
+            
+            // 如果广告开启，加载广告脚本
+            if (adEnabled) {
+                var script = document.createElement('script');
+                script.src = 'https://pl29156693.profitablecpmratenetwork.com/3b/02/ca/3b02ca19caac0ac0fc61ee457d3671a1.js';
+                script.async = true;
+                script.fetchPriority = 'high';
+                document.head.appendChild(script);
+            }
         })();
     </script>
 

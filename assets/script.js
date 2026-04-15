@@ -296,5 +296,10 @@ function restart() {
     window.scrollTo(0, 0);
 }
 
+// 关闭欢迎弹窗
+function closeModal() {
+    document.getElementById('welcomeModal').classList.add('hidden');
+}
+
 document.addEventListener('DOMContentLoaded', init);
 

@@ -79,6 +79,8 @@ h1 {
     margin-bottom: 15px;
     padding: 18px;
     box-shadow: var(--shadow-card);
+    position: relative;
+    z-index: 10;
 }
 
 .question-title {
@@ -113,6 +115,8 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
+    z-index: 11;
 }
 
 .option:hover {
@@ -288,6 +292,132 @@ h1 {
     margin-top: 20px;
     color: var(--color-text-muted);
     font-size: 0.85rem;
+}
+
+/* 广告开关样式 */
+.ad-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 8px;
+}
+
+.ad-toggle-text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--color-primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* 弹窗样式 */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--color-card);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: var(--shadow-md);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modal-ops {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.modal-btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.modal-btn:hover {
+    opacity: 0.9;
 }
 
 @media (max-width: 600px) {
